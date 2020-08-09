@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f8f8f8;
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.096)
+}
+header nav{
+    width: 100%;
+    background-color: white;
+}
+header nav ul{
+    padding: 10px 30px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 70px);
+}
+article{
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: white;
+    transition: box-shadow 0.2s linear;
+    box-shadow: 0px 0px 3px 0px rgba(128, 128, 128, 0.418);
+}
+article:hover{
+    box-shadow: -5px 5px 5px 0px rgba(128, 128, 128, 0.212);
+}
+article .top{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+article img{
+    width: 50px;
+}
+.articalBody{
+    width: 100%;
+    padding: 10px;
+}
+.articalBody h4 , .result .top div:last-child h4{
+    margin: 10px;
+}
+.articalBody p , .result .top div:last-child p{
+    color: gray;
+    margin-left: 20px;
+}
+.articalBody p b , .result .top div:last-child p b{
+    color: #54c9f0;
+}
+.articalBody button , .result .top div:last-child button{
+    margin: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 20px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: #54c9f0;
+    box-shadow: 0px 0px 3px 0px #3ea9cc;
+    outline-color: rgba(128, 128, 128, 0.548);
+}
+.articalBodyTop{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.optionContainer{
+    margin: 10px;
+    height: 40px;
+    display: flex;
+    padding-left: 0px;
+    margin-left: 40px;
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.445);
+}
+.optionContainer span{
+    width: 40px;
+    height: 100%;
+    color: white;
+    padding-top: 5px;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    background-color: #54c9f0;
+}
+.optionContainer input{
+    right: 10px;
+    width: 20px;
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+}
+input[type="radio"] {
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid #bbbbbb;
+    background-color: #e7e6e7;
+    border-radius: 50%;
+    outline: none;
+  }
+  
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+    background-color: #54c9f0 ;
+}   
+.result .top div:first-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: flex-start;
+}
+.result .top{
+    display: flex;
+    flex-direction: column;
+}
+.result .top div:last-child{
+    width: 100%;
+}
+.result .top div:last-child button a{
+    text-decoration: none;
+    color: white;
+}
+/* medai query */
+@media screen and (max-width:300px){
+    li h1{
+        font-size: 1rem !important;
+    }
+}
+@media screen and (max-width:405px){
+    .optionContainer{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width:360px){
+    .optionContainer span{
+        font-size: medium;
+        padding-top: 10px;
+    }
+    .optionContainer h5{
+        font-size: 11px !important;
+    }
+    input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        padding: 3px;
+      }
+}
